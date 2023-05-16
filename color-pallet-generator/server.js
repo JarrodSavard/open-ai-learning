@@ -6,10 +6,6 @@ app.get('/', (req, res) => {
 	res.send('Hello World!');
 });
 
-app.get('/api', (req, res) => {
-	res.send('API');
-});
-
 app.post('/', (req, res) => {
 	res.send('Got a POST request');
 });
