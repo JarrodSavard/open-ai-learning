@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
 	res.json({ status: 'online' });
 });
 
+app.get('/api', (req, res) => {
+	res.send('API');
+});
+
 app.post('/', (req, res) => {
 	res.send('Got a POST request');
 });
