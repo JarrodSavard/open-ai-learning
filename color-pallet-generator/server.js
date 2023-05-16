@@ -10,6 +10,10 @@ app.get('/api', (req, res) => {
 	res.send('API');
 });
 
+app.post('/', (req, res) => {
+	res.send('Got a POST request');
+});
+
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);
 });
