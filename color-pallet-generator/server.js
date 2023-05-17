@@ -5,6 +5,14 @@ const app = express();
 app.use(express.json());
 const port = 3000;
 
+// Enable CORS middleware
+app.use((req, res, next) => {
+	res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+	res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+	next();
+});
+
 app.get('/', (req, res) => {
 	res.json({ status: 'online' });
 });
